@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="memory-game">
+        <div class="starting">
+            <button>Start Game</button>
+        </div>
+        <div class="completing">
+            <h1>You Made it! Congrats</h1>
+            <button>Start Game</button>
+        </div>
+        <div class="failed">
+            <h1>Game Over</h1>
+            <button>Start Again</button>
+        </div>
+        <div class="score">
+            <h3>Hello <span class="name"></span></h3>
+            <h3>Timer: <span class="timer">90</span></h3>
+            <h3>Wrong ties: <span class="wrong-ties">0</span></h3>
+        </div>
+        <div class="cards-grid">
+            <div class="card" data-anime="sad">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/sad.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="sad">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/sad.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="angry">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/angry.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="angry">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/angry.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="blushing">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/blushing.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="blushing">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/blushing.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="confused">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/confused.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="confused">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/confused.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="excited">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/excited.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="excited">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/excited.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="good">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/good.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="good">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/good.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="mockery">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/mockery.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="mockery">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/mockery.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="ok">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/ok.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="ok">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/ok.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="sick">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/sick.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="sick">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/sick.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="sing">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/sing.png" alt="">
+                </div>
+            </div>
+            <div class="card" data-anime="sing">
+                <div class="front"></div>
+                <div class="back">
+                    <img src="./imgs/sing.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio src="./audios/Most Epic Anime OST - Legend of Martial Artist.mp4" autoplay loop preload="auto"></audio>
+    <audio src="./audios/[EXTREMELY LOUD INCORRECT BUZZER SOUND].mp4" class="fail"></audio>
+    <audio src="./audios/Success sound effect (copyright free).mp4" class="correct"></audio>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.memory-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px auto;
+    position: relative;
+    width: 95%;
+}
+.memory-game .starting {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(137, 43, 226, 0.626);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.memory-game .completing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(83, 226, 43, 0.626);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    gap: 20px;
+    display: none;
+}
+.memory-game .failed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 37, 70, 0.626);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    flex-direction: column;
+    gap: 20px;
+    display: none;
+}
+.memory-game .score {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #eee;
+    border: 3px solid blueviolet;
+    width: 100%;
+}
+.memory-game > div button {
+    background-color: white;
+    color: #333;
+    padding: 15px 25px;
+    font-size: 25px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.memory-game .cards-grid {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.memory-game .cards-grid .card {
+    position: relative;
+    height: 150px;
+    width: calc((100% - 40px) / 5);
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+.memory-game .cards-grid .card.is_flipped,
+.memory-game .cards-grid .card.is_matched {
+    transform: rotateY(180deg);
+    pointer-events: none;
+}
+.memory-game .cards-grid .card > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+}
+.memory-game .cards-grid .card .back {
+    background-color: #333;
+    transform: rotateY(180deg);
+}
+.memory-game .cards-grid .card .back img {
+    width: 140px;
+    height: 140px;
+}
+.memory-game .cards-grid .card .front {
+    background-color: #eee;
+    border: 3px solid blueviolet;
+}
+.memory-game .cards-grid .card .front::before {
+    content: "?";
+    position: absolute;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: bold;
+}
