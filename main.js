@@ -3,10 +3,10 @@ let order_array = Array.from(game_cards.keys());
 let flipped_cards_num = 0;
 let wrong_ties = document.querySelector(".wrong-ties");
 let start = document.querySelector(".timer");
-
+let count;
 //Timer Function
 function timer() {
-    let count = setInterval(()=> {
+count = setInterval(()=> {
         start.innerHTML--;
         if (start.innerHTML == 0) {
             clearInterval(count);
@@ -82,6 +82,7 @@ game_cards.forEach((card) => {
 
 //Complete the game
 function completed() {
+    clearInterval(count);
     document.querySelector(".memory-game .completing").style.display = "flex";
     document.querySelector(".memory-game .completing button").addEventListener("click", () => {
         document.querySelector(".memory-game .completing").style.display = "none";
